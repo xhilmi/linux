@@ -6,10 +6,11 @@ URL : https://krisnayuda.wordpress.com/2020/09/07/tips-ssh-vs-code/
 $ ssh-keygen -t rsa
 
 3. Run this function on terminal VS Code
+```
 $targetHost="username@hostserver.com"
 $pubkeyPath="$HOME/.ssh/id_rsa.pub"
 $pubKey=(Get-Content "$pubkeyPath" | Out-String); ssh "$targetHost" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
-
+```
 $targetHost="username@hostserver.com"
 $pubkeyPath="$HOME/.ssh/id_rsa.pub"
 $pubKey=(Get-Content "$pubkeyPath" | Out-String); ssh -p 64000 "$targetHost" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
