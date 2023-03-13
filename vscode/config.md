@@ -4,7 +4,7 @@
 
 2. Install extension Remote SSH 
  
-3. Run ssh-keygen on terminal VS Code then just hit enter
+3. Run ssh-keygen on terminal VS Code then just hit enter (powershell)
 ```
 $ ssh-keygen -t rsa
 ```
