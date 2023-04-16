@@ -6,7 +6,7 @@
  
 3. Run ssh-keygen on terminal VS Code then just hit enter (powershell)
 ```
-$ ssh-keygen -t rsa
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa <<< y
 ```
 
 4. Run this function on terminal VS Code
