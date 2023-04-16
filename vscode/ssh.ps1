@@ -1,3 +1,5 @@
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa <<< y
+
 $hostServer = Read-Host "Enter the host server"
 $user = Read-Host "Enter the username"
 $port = Read-Host "Enter the port number"
