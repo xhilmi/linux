@@ -20,7 +20,7 @@ $pubkeyPath = "$HOME/.ssh/id_rsa.pub"
 $pubKey = (Get-Content "$pubkeyPath" | Out-String); ssh -p $port "$targetHost" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
 
-5. Or you could run this command below on your CMD / PowerShell
+5. Or you could run this command below on your CMD / PowerShell <br>
 `powershell -command "& {Invoke-Expression ((New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/xhilmi/linux/master/vscode/ssh.ps1'))}"`
 
 #### Reference : https://krisnayuda.wordpress.com/2020/09/07/tips-ssh-vs-code/
