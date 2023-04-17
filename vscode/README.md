@@ -30,6 +30,7 @@ $pubKey = (Get-Content "$pubkeyPath" | Out-String); ssh -p $port "$targetHost" "
 - Docker: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker	
 - Docker Explorer: https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer
 - Hacker Theme: https://marketplace.visualstudio.com/items?itemName=thorerik.hacker-theme
+- Hallows Theme: https://marketplace.visualstudio.com/items?itemName=konapun.all-hallows-eve-plus
 - Indent One Space: https://marketplace.visualstudio.com/items?itemName=usernamehw.indent-one-space
 - Kubernetes Highlighter: https://marketplace.visualstudio.com/items?itemName=dag-andersen.kubernetes-reference-highlighter
 - Kubernetes Support: https://marketplace.visualstudio.com/items?itemName=ipedrazas.kubernetes-snippets
