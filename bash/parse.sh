@@ -6,6 +6,9 @@ SYSLOG="/var/log/syslog"
 # Backup your example into the new one
 LOG_LOCATION="/var/log/challenge.log"
 
+# Folder name
+FOLDER="linux-challenge"
+
 # Export final result to new file
 EXPORT_LOCATION="$HOME/linux-challenge/new.log"
 
@@ -24,6 +27,9 @@ fi
 if [[ ! -f "$LOG_LOCATION" ]]; then
     touch "$LOG_LOCATION"
 fi
+
+# Create folder
+mkdir "/root/$FOLDER"
 
 # Append syslog into challenge.log
 cat "$SYSLOG" > "$LOG_LOCATION"
