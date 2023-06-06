@@ -29,7 +29,12 @@ if [[ ! -f "$LOG_LOCATION" ]]; then
 fi
 
 # Create folder
-mkdir "/root/$FOLDER"
+if [ ! -d "$FOLDER" ]; then
+  mkdir -p "$FOLDER"
+  echo "Folder created: $FOLDER"
+else
+  echo "Folder already exists: $FOLDER"
+fi
 
 # Append syslog into challenge.log
 cat "$SYSLOG" > "$LOG_LOCATION"
