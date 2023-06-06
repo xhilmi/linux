@@ -13,10 +13,10 @@ FOLDER="linux-challenge"
 EXPORT_LOCATION="$HOME/linux-challenge/new.log"
 
 # Specify Date
-DATE="$(date '+%b %e')"
+DATE="$(date '+%d-%m-%Y')"
 
 # Interactive prompt user for input
-read -p "Enter date of syslog search (leave blank for today's date): " DATE_TEXT
+read -p "Enter date of syslog search [format: dd-mm-yyy] or (leave blank for today's date): " DATE_TEXT
 
 # If there is no date text provided, use today's date
 if [[ -z "$DATE_TEXT" ]]; then
