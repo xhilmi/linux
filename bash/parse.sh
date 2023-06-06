@@ -7,16 +7,24 @@ SYSLOG="/var/log/syslog"
 LOG_LOCATION="/var/log/challenge.log"
 
 # Folder name
-FOLDER="linux-challenge"
+FOLDER="/root/linux-challenge"
 
 # Export final result to new file
-EXPORT_LOCATION="$HOME/linux-challenge/new.log"
+EXPORT_LOCATION="$FOLDER/new.log"
 
 # Specify Date
-DATE="$(date '+%d-%m-%Y')"
+DATE="$(date '+%b %e')"
+
+# Create folder
+if [ ! -d "$FOLDER" ]; then
+  mkdir -p "$FOLDER"
+  echo "Folder created: $FOLDER"
+else
+  echo "Folder already exists: $FOLDER"
+fi
 
 # Interactive prompt user for input
-read -p "Enter date of syslog search [format: dd-mm-yyy] or (leave blank for today's date): " DATE_TEXT
+read -p "Enter date of syslog search [Jun 6] or (leave blank for today's date): " DATE_TEXT
 
 # If there is no date text provided, use today's date
 if [[ -z "$DATE_TEXT" ]]; then
@@ -26,14 +34,6 @@ fi
 # Create challenge.log file if it doesn't exist
 if [[ ! -f "$LOG_LOCATION" ]]; then
     touch "$LOG_LOCATION"
-fi
-
-# Create folder
-if [ ! -d "$FOLDER" ]; then
-  mkdir -p "$FOLDER"
-  echo "Folder created: $FOLDER"
-else
-  echo "Folder already exists: $FOLDER"
 fi
 
 # Append syslog into challenge.log
